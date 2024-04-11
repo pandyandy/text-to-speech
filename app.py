@@ -10,7 +10,7 @@ from langcodes import Language
 from google.cloud import texttospeech
 from vertexai.generative_models import GenerativeModel
 
-os.environ["GCLOUD_PROJECT"] = "/Users/andreanovakova/.config/gcloud/application_default_credentials.json"
+# os.environ["GCLOUD_PROJECT"] = ""
 
 path = os.path.dirname(os.path.abspath(__file__))
 
