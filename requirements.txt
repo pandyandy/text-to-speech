@@ -1,0 +1,6 @@
+streamlit
+google-cloud-texttospeech
+pandas
+vertexai
+langcodes
+language_data
