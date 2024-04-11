@@ -130,7 +130,7 @@ def get_speech():
         left_mid_col, mid_mid_col, right_mid_col = st.columns([1, 10, 1], gap="small")
 
         left_mid_col.image(GEMINI_LOGO)
-        input = mid_mid_col.text_input("Generate intro speech with Gemini:")
+        input = mid_mid_col.text_input("Use Gemini to generate your text to speak:")
         right_mid_col.write("####")
         if right_mid_col.form_submit_button("Submit", use_container_width=True):
             output = generate(input)
@@ -193,7 +193,7 @@ def app():
         st.session_state.voice_lang = selected_lang
 
         # Filter voices by selected language
-        filtered_voices = voices[voices["language"] == selected_lang]
+        filtered_voices = voices[voices["language"] == selected_lang].copy()
 
         # Find Voice types
         pattern = r'(\w+)-[A-Z\d]$'
